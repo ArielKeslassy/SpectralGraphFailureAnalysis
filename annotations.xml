@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>2019715</id>
+      <name>SGT_labeling</name>
+      <size>199</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2026-02-12 10:13:53.566244+00:00</created>
+      <updated>2026-02-12 17:47:08.121404+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>198</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>3613721</id>
+          <start>0</start>
+          <stop>198</stop>
+          <url>https://app.cvat.ai/api/tasks/2019715/dataset/export/api/jobs/3613882</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>ariel47</username>
+        <email>arielkeslassy@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>valid</name>
+          <color>#66ff66</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>Attribute Leakage</name>
+          <color>#fa3253</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>Numeration Error</name>
+          <color>#3d3df5</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>Fractured Geometry</name>
+          <color>#f078f0</color>
+          <type>any</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </task>
+    <dumped>2026-02-12 17:51:24.706569+00:00</dumped>
+  </meta>
+  <image id="0" name="0.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="1" name="1.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="2" name="10.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="3" name="100.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="4" name="101.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="5" name="102.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="6" name="103.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="7" name="104.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="8" name="105.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="9" name="106.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="10" name="107.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="11" name="108.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="12" name="109.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="13" name="11.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="14" name="110.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="15" name="111.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="16" name="112.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="17" name="113.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="18" name="114.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="19" name="115.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="20" name="116.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="21" name="117.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="22" name="118.png" width="512" height="512">
+    <tag label="valid" source="manual">
+    </tag>
+  </image>
+  <image id="23" name="119.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="24" name="12.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="25" name="120.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="26" name="121.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="27" name="122.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="28" name="123.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="29" name="124.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="30" name="125.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="31" name="126.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="32" name="127.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="33" name="128.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="34" name="129.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="35" name="13.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="36" name="130.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="37" name="131.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="38" name="132.png" width="512" height="512">
+    <tag label="valid" source="manual">
+    </tag>
+  </image>
+  <image id="39" name="133.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="40" name="134.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="41" name="135.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="42" name="136.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="43" name="137.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="44" name="138.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="45" name="139.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="46" name="14.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="47" name="140.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="48" name="141.png" width="512" height="512">
+    <tag label="valid" source="manual">
+    </tag>
+  </image>
+  <image id="49" name="142.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="50" name="143.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="51" name="144.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="52" name="145.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="53" name="146.png" width="512" height="512">
+    <tag label="valid" source="manual">
+    </tag>
+  </image>
+  <image id="54" name="147.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="55" name="148.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="56" name="149.png" width="512" height="512">
+    <tag label="valid" source="manual">
+    </tag>
+  </image>
+  <image id="57" name="15.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="58" name="150.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="59" name="151.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="60" name="152.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="61" name="153.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="62" name="154.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="63" name="155.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="64" name="156.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="65" name="157.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="66" name="158.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="67" name="159.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="68" name="16.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="69" name="160.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="70" name="161.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="71" name="162.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="72" name="163.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="73" name="164.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="74" name="165.png" width="512" height="512">
+    <tag label="valid" source="manual">
+    </tag>
+  </image>
+  <image id="75" name="166.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="76" name="167.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="77" name="168.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="78" name="169.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="79" name="17.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="80" name="170.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="81" name="171.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="82" name="172.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="83" name="173.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="84" name="174.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="85" name="175.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="86" name="176.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="87" name="177.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="88" name="178.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="89" name="179.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="90" name="18.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="91" name="180.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="92" name="181.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="93" name="182.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="94" name="183.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="95" name="184.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="96" name="185.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="97" name="186.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="98" name="187.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="99" name="188.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="100" name="189.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="101" name="19.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="102" name="190.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="103" name="191.png" width="512" height="512">
+    <tag label="valid" source="manual">
+    </tag>
+  </image>
+  <image id="104" name="192.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="105" name="193.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="106" name="194.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="107" name="195.png" width="512" height="512">
+    <tag label="valid" source="manual">
+    </tag>
+  </image>
+  <image id="108" name="196.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="109" name="197.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="110" name="198.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="111" name="2.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="112" name="20.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="113" name="21.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="114" name="22.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="115" name="23.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="116" name="24.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="117" name="25.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="118" name="26.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="119" name="27.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="120" name="28.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="121" name="29.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="122" name="3.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="123" name="30.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="124" name="31.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="125" name="32.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="126" name="33.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="127" name="34.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="128" name="35.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="129" name="36.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="130" name="37.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="131" name="38.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="132" name="39.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="133" name="4.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="134" name="40.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="135" name="41.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="136" name="42.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="137" name="43.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="138" name="44.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="139" name="45.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="140" name="46.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="141" name="47.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="142" name="48.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="143" name="49.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="144" name="5.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="145" name="50.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="146" name="51.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="147" name="52.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="148" name="53.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="149" name="54.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="150" name="55.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="151" name="56.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="152" name="57.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="153" name="58.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="154" name="59.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="155" name="6.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="156" name="60.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="157" name="61.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="158" name="62.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="159" name="63.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="160" name="64.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="161" name="65.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="162" name="66.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="163" name="67.png" width="512" height="512">
+    <tag label="valid" source="manual">
+    </tag>
+  </image>
+  <image id="164" name="68.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="165" name="69.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="166" name="7.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="167" name="70.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="168" name="71.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="169" name="72.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="170" name="73.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="171" name="74.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="172" name="75.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="173" name="76.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="174" name="77.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="175" name="78.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="176" name="79.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="177" name="8.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="178" name="80.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="179" name="81.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="180" name="82.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="181" name="83.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="182" name="84.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="183" name="85.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="184" name="86.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="185" name="87.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="186" name="88.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="187" name="89.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="188" name="9.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="189" name="90.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="190" name="91.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="191" name="92.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="192" name="93.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="193" name="94.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="194" name="95.png" width="512" height="512">
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="195" name="96.png" width="512" height="512">
+    <tag label="Numeration Error" source="manual">
+    </tag>
+  </image>
+  <image id="196" name="97.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Numeration Error" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+  <image id="197" name="98.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+  </image>
+  <image id="198" name="99.png" width="512" height="512">
+    <tag label="Attribute Leakage" source="manual">
+    </tag>
+    <tag label="Fractured Geometry" source="manual">
+    </tag>
+  </image>
+</annotations>

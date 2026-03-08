@@ -1,0 +1,84 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        code_path: source-spectral-graph-failure-analysis-main.py
+        e:
+            z22sd2udmqxvv87epxswc10nd9fgok2k:
+                apple:
+                    ecpuCores: 4
+                    gpuCores: 7
+                    memoryGb: 16
+                    name: Apple M1
+                    pcpuCores: 4
+                    ramTotalBytes: "17179869184"
+                    swapTotalBytes: "5368709120"
+                codePath: main.py
+                codePathLocal: main.py
+                cpu_count: 8
+                cpu_count_logical: 8
+                disk:
+                    /:
+                        total: "245107195904"
+                        used: "235469942784"
+                email: ariel.keslassy@post.runi.ac.il
+                executable: /Users/arielkeslassy/PycharmProjects/SpectralGraphFailureAnalysis/.venv/bin/python
+                host: MacBookAir.bbrouter
+                memory:
+                    total: "17179869184"
+                os: macOS-15.6.1-arm64-arm-64bit-Mach-O
+                program: /Users/arielkeslassy/PycharmProjects/SpectralGraphFailureAnalysis/main.py
+                python: CPython 3.13.3
+                root: /Users/arielkeslassy/PycharmProjects/SpectralGraphFailureAnalysis
+                startedAt: "2026-02-13T20:54:35.881953Z"
+                writerId: z22sd2udmqxvv87epxswc10nd9fgok2k
+        m: []
+        python_version: 3.13.3
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 71
+                - 83
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 71
+                - 83
+            "3":
+                - 2
+                - 16
+            "4": 3.13.3
+            "5": 0.25.0
+            "6": 5.1.0
+            "12": 0.25.0
+            "13": darwin-arm64
+annotations_path:
+    value: ./annotations.xml
+attention_data_path:
+    value: /Users/arielkeslassy/Documents/reichman/courses/SNA/experiments/data
+calculate_features:
+    value: true
+features_path:
+    value: features_easy-fog-11.npy
+inner_cv_splits:
+    value: 4
+k_eigenvalues:
+    value: 10
+logistic_regression_max_iter:
+    value: 2000
+n_splits:
+    value: 5
+normalized_laplacian:
+    value: true
+rng:
+    value: 42
+sparse_factor:
+    value: 0.1

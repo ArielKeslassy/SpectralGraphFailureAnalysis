@@ -1,0 +1,14 @@
+torch==2.10.0
+torchvision
+torchaudio
+wandb
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+networkx
+Pillow
+tqdm
+PyYAML
+igraph
