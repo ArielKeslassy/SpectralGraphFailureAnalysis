@@ -285,6 +285,14 @@ def extract_spectral_features_per_image(
                     )
                     for key, value in graph_stats.items():
                         stats_by_type[key].append(value)
+        
+        # Explicitly delete large intermediate tensors and igraph objects
+        del maps_tensor
+        del eigenvalues
+        del eigenvectors
+        if graphs is not None:
+            del graphs
+
 
     # OPTIMIZATION: Aggregate on GPU, transfer to CPU only once at the end
     img_features = {}
@@ -449,5 +457,9 @@ def spectral_features(
             features = extract_spectral_features_per_image(attention_maps_for_image, config)
             for key, val in features.items():
                 image_features_dict[key].append(val.detach().cpu().numpy())
+        
+        # Clear CUDA cache after processing each image's attention maps
+        if device == 'cuda':
+            torch.cuda.empty_cache()
 
     return {key: np.array(val) for key, val in image_features_dict.items()}

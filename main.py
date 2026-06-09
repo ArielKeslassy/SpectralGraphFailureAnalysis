@@ -99,7 +99,7 @@ if __name__ == "__main__":
     parser.add_argument('--recalculate', action='store_true', help='Recalculate features.')
     parser.add_argument('--features_path', type=str, default='features.npy', help='Path to the features file.')
     parser.add_argument('--annotations_path', type=str, default='./annotations.xml', help='Path to the annotations file.')
-    parser.add_argument('--attention_data_path', type=str, default='/Users/arielkeslassy/Documents/reichman/courses/SNA/experiments/data', help='Path to the attention data directory.')
+    parser.add_argument('--attention_data_path', type=str, default='/Users/arielkeslassy/local_documents/reichman/courses/s1/SNA/experiments/data', help='Path to the attention data directory.')
     args = parser.parse_args()
 
     default_config = {
