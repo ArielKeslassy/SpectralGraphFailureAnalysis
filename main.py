@@ -12,6 +12,15 @@ from probes import run_probes
 
 
 def main(config, run):
+    # Determine device
+    if torch.cuda.is_available():
+        device = 'cuda'
+    elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+        device = 'mps'
+    else:
+        device = 'cpu'
+    print(f"Using device: {device}")
+
     sorted_image_names, y, binarizer = load_labels(config.annotations_path)
     if config.debug:
         # get just 2 images labels with the same shape
@@ -29,7 +38,8 @@ def main(config, run):
 
         all_attention_weights = load_attention(
             config.attention_data_path,
-            sorted_image_names
+            sorted_image_names,
+            device=device  # Pass the determined device
         )
         if config.debug:
             # get just 1 attention maps for only 2 images with the same shape
@@ -46,6 +56,7 @@ def main(config, run):
             betweenness_sample_size=config.betweenness_sample_size,
             approximate_closeness=config.approximate_closeness,
             closeness_cutoff=config.closeness_cutoff,
+            device=device  # Pass the determined device to SpectralConfig
         )
         # returns a dict of 1d arrays
         feature_dict = spectral_features(all_attention_weights, config=spectral_config)
@@ -97,9 +108,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--debug', action='store_true', help='Run in debug mode (disables wandb).')
     parser.add_argument('--recalculate', action='store_true', help='Recalculate features.')
-    parser.add_argument('--features_path', type=str, default='features.npy', help='Path to the features file.')
+    parser.add_argument('--features_path', type=str, default='features.npz', help='Path to the features file.')
     parser.add_argument('--annotations_path', type=str, default='./annotations.xml', help='Path to the annotations file.')
-    parser.add_argument('--attention_data_path', type=str, default='/Users/arielkeslassy/local_documents/reichman/courses/s1/SNA/experiments/data', help='Path to the attention data directory.')
+    parser.add_argument('--attention_data_path', type=str, default='/home/ariel/PycharmProjects/SpectralGraphFailureAnalysis/data', help='Path to the attention data directory.')
     args = parser.parse_args()
 
     default_config = {

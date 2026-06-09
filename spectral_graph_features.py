@@ -104,15 +104,24 @@ def compute_graph_theory_features_batch(
         fiedler_vectors = eigenvectors[:, :, 1]  # [B, N]
         features['fiedler_vector_variance'] = torch.var(fiedler_vectors, dim=1)
 
-    # OPTIMIZATION 2: Spectral entropy (pure GPU)
+    # OPTIMIZATION 2: Spectral entropy (pure GPU, fully vectorized)
     eigenvalues_sum = eigenvalues.sum(dim=1, keepdim=True)
-    valid_mask = eigenvalues_sum.squeeze() > 1e-9
+    valid_mask = (eigenvalues_sum.squeeze(-1) > 1e-9)
 
-    for b in range(batch_size):
-        if valid_mask[b]:
-            norm_eigs = eigenvalues[b] / eigenvalues_sum[b]
-            norm_eigs = norm_eigs[norm_eigs > 1e-9]
-            features['spectral_entropy'][b] = -torch.sum(norm_eigs * torch.log(norm_eigs))
+    # Batched implementation
+    # Using element-wise division for normalized eigenvalues
+    # To avoid division by zero, we will add a small epsilon to the sum
+    norm_eigs = eigenvalues / (eigenvalues_sum + 1e-9)
+    # Mask out values below threshold
+    mask = norm_eigs > 1e-9
+    # Compute entropy where mask is true, 0 elsewhere
+    entropy_components = torch.zeros_like(norm_eigs)
+    entropy_components[mask] = -norm_eigs[mask] * torch.log(norm_eigs[mask])
+    # Sum across eigenvalues
+    entropy_sum = torch.sum(entropy_components, dim=1)
+    
+    # Only assign entropy where valid_mask is True
+    features['spectral_entropy'] = torch.where(valid_mask, entropy_sum, torch.zeros_like(entropy_sum))
 
     # OPTIMIZATION 3: Batch igraph operations (minimize Python overhead)
     # Pre-compute all centralities in one pass to leverage igraph's internal optimizations
@@ -121,23 +130,15 @@ def compute_graph_theory_features_batch(
 
         # Use pre-computed centralities when available
         if hasattr(G, 'eigenvector_centrality_val'):
-            eig_centrality = G.eigenvector_centrality_val
-            features['eigenvector_centrality_mean'][b] = torch.tensor(
-                np.mean(eig_centrality), device=device
-            )
-            features['eigenvector_centrality_std'][b] = torch.tensor(
-                np.std(eig_centrality), device=device
-            )
+            eig_centrality = torch.tensor(G.eigenvector_centrality_val, device=device)
+            features['eigenvector_centrality_mean'][b] = eig_centrality.mean()
+            features['eigenvector_centrality_std'][b] = eig_centrality.std()
         else:
             # Fallback: compute if not pre-computed
             try:
-                eig_centrality = G.evcent()
-                features['eigenvector_centrality_mean'][b] = torch.tensor(
-                    np.mean(eig_centrality), device=device
-                )
-                features['eigenvector_centrality_std'][b] = torch.tensor(
-                    np.std(eig_centrality), device=device
-                )
+                eig_centrality = torch.tensor(G.evcent(), device=device)
+                features['eigenvector_centrality_mean'][b] = eig_centrality.mean()
+                features['eigenvector_centrality_std'][b] = eig_centrality.std()
             except Exception:
                 pass  # Already initialized to 0
 
@@ -151,81 +152,53 @@ def compute_graph_theory_features_batch(
                 betweenness = G.betweenness(vertices=list(range(n)), cutoff=None)
                 # Scale by sampling ratio to approximate full betweenness
                 scale_factor = n / sample_size
-                betweenness_scaled = [b * scale_factor for b in betweenness]
-                features['betweenness_centrality_mean'][b] = torch.tensor(
-                    np.mean(betweenness_scaled), device=device
-                )
-                features['betweenness_centrality_std'][b] = torch.tensor(
-                    np.std(betweenness_scaled), device=device
-                )
+                betweenness_scaled = torch.tensor(betweenness, device=device) * scale_factor
+                features['betweenness_centrality_mean'][b] = betweenness_scaled.mean()
+                features['betweenness_centrality_std'][b] = betweenness_scaled.std()
             else:
                 # Full exact betweenness computation
-                betweenness = G.betweenness()
-                features['betweenness_centrality_mean'][b] = torch.tensor(
-                    np.mean(betweenness), device=device
-                )
-                features['betweenness_centrality_std'][b] = torch.tensor(
-                    np.std(betweenness), device=device
-                )
+                betweenness = torch.tensor(G.betweenness(), device=device)
+                features['betweenness_centrality_mean'][b] = betweenness.mean()
+                features['betweenness_centrality_std'][b] = betweenness.std()
 
             # Closeness centrality with optional cutoff approximation
             if config.approximate_closeness:
                 # Cutoff-based approximation: only consider paths up to cutoff length
                 # This is much faster and often captures local structure well
-                closeness = G.closeness(cutoff=config.closeness_cutoff)
-                features['closeness_centrality_mean'][b] = torch.tensor(
-                    np.mean(closeness), device=device
-                )
-                features['closeness_centrality_std'][b] = torch.tensor(
-                    np.std(closeness), device=device
-                )
+                closeness = torch.tensor(G.closeness(cutoff=config.closeness_cutoff), device=device)
+                features['closeness_centrality_mean'][b] = closeness.mean()
+                features['closeness_centrality_std'][b] = closeness.std()
             else:
                 # Full exact closeness computation
-                closeness = G.closeness()
-                features['closeness_centrality_mean'][b] = torch.tensor(
-                    np.mean(closeness), device=device
-                )
-                features['closeness_centrality_std'][b] = torch.tensor(
-                    np.std(closeness), device=device
-                )
+                closeness = torch.tensor(G.closeness(), device=device)
+                features['closeness_centrality_mean'][b] = closeness.mean()
+                features['closeness_centrality_std'][b] = closeness.std()
         except Exception as e:
             # Graceful fallback on error
             pass  # Already initialized to 0
 
         # Degree centrality (use pre-computed when available)
         if hasattr(G, 'degree_centrality_val'):
-            degree_centrality_vals = G.degree_centrality_val
-            features['degree_centrality_mean'][b] = torch.tensor(
-                np.mean(degree_centrality_vals), device=device
-            )
-            features['degree_centrality_std'][b] = torch.tensor(
-                np.std(degree_centrality_vals), device=device
-            )
+            degree_centrality_vals = torch.tensor(G.degree_centrality_val, device=device)
+            features['degree_centrality_mean'][b] = degree_centrality_vals.mean()
+            features['degree_centrality_std'][b] = degree_centrality_vals.std()
 
             # Freeman centrality
             if n > 2:
-                max_dc = np.max(degree_centrality_vals) if len(degree_centrality_vals) > 0 else 0
-                centralization_num = np.sum(max_dc - degree_centrality_vals)
-                features['freeman_centrality_degree'][b] = torch.tensor(
-                    centralization_num / (n - 2), device=device
-                )
+                max_dc = degree_centrality_vals.max() if len(degree_centrality_vals) > 0 else 0
+                centralization_num = (max_dc - degree_centrality_vals).sum()
+                features['freeman_centrality_degree'][b] = centralization_num / (n - 2)
         else:
             degree_centrality = G.degree()
             if degree_centrality:
-                dc_vals = list(degree_centrality)
-                features['degree_centrality_mean'][b] = torch.tensor(
-                    np.mean(dc_vals), device=device
-                )
-                features['degree_centrality_std'][b] = torch.tensor(
-                    np.std(dc_vals), device=device
-                )
+                dc_vals = torch.tensor(degree_centrality, device=device)
+                features['degree_centrality_mean'][b] = dc_vals.mean()
+                features['degree_centrality_std'][b] = dc_vals.std()
 
                 if n > 2:
-                    max_dc = max(dc_vals)
-                    centralization_num = sum(max_dc - c for c in dc_vals)
-                    features['freeman_centrality_degree'][b] = torch.tensor(
-                        centralization_num / (n - 2), device=device
-                    )
+                    max_dc = dc_vals.max()
+                    centralization_num = (max_dc - dc_vals).sum()
+                    features['freeman_centrality_degree'][b] = centralization_num / (n - 2)
 
     return features
 
@@ -285,14 +258,13 @@ def extract_spectral_features_per_image(
                     )
                     for key, value in graph_stats.items():
                         stats_by_type[key].append(value)
-        
+
         # Explicitly delete large intermediate tensors and igraph objects
         del maps_tensor
         del eigenvalues
         del eigenvectors
         if graphs is not None:
             del graphs
-
 
     # OPTIMIZATION: Aggregate on GPU, transfer to CPU only once at the end
     img_features = {}
@@ -457,7 +429,7 @@ def spectral_features(
             features = extract_spectral_features_per_image(attention_maps_for_image, config)
             for key, val in features.items():
                 image_features_dict[key].append(val.detach().cpu().numpy())
-        
+
         # Clear CUDA cache after processing each image's attention maps
         if device == 'cuda':
             torch.cuda.empty_cache()

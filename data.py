@@ -6,13 +6,14 @@ from diffusers import DiffusionPipeline
 from sklearn.preprocessing import MultiLabelBinarizer
 from diffusers.models.attention_processor import AttnProcessor2_0
 
-def load_attention(attention_path, image_names):
+def load_attention(attention_path, image_names, device='cpu'):
     """
     Loads attention weights from .pt files for a given list of image names.
 
     Args:
         attention_path (str): The path to the directory containing the .pt files.
         image_names (list): A list of image filenames (e.g., ['0.png', '1.png']).
+        device (str or torch.device): The device to load the tensors onto. Defaults to 'cpu'.
 
     Returns:
         list: A list of dictionaries, where each dictionary contains the
@@ -25,7 +26,7 @@ def load_attention(attention_path, image_names):
         
         if os.path.exists(pt_path):
             try:
-                attention_weights = torch.load(pt_path, map_location=torch.device('cpu'))
+                attention_weights = torch.load(pt_path, map_location=torch.device(device))
                 all_attention_weights.append(attention_weights)
             except Exception as e:
                 print(f"Warning: Could not load attention file {pt_path}. Error: {e}")
@@ -202,11 +203,7 @@ def generate_data(num_images=50, data_path='.', batch_size=4):
 #
 #             # Show info about the loaded attention map
 #             first_map_keys = loaded_attention_maps[0].keys()
-#             print(f"  - Attention map layers captured: {len(first_map_keys)}")
-#             if first_map_keys:
-#                 example_layer = list(first_map_keys)[0]
-#                 example_tensor = loaded_attention_maps[0][example_layer]
-#                 print(f"  - Example layer ('{example_layer}') tensor shape: {example_tensor.shape}")
+#             print(f"  - Example layer ('{example_layer}') tensor shape: {example_tensor.shape}")
 #
 #     except FileNotFoundError as e:
 #         print(f"Error: A required file was not found. Please ensure '{ANNOTATIONS_FILE}' and the .pt files are in the correct directory.")

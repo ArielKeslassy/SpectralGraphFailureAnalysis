@@ -12,3 +12,4 @@ Pillow
 tqdm
 PyYAML
 igraph
+diffusers
